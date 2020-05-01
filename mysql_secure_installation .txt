@@ -1,0 +1,65 @@
+$ sudo mysql_secure_installation (ubuntu)
+
+Achtung:HINWEIS: Das Ausführen aller Teile dieses Skripts wird für alle MySQL empfohlen
+SERVER IM PRODUKTIONSGEBRAUCH! BITTE LESEN SIE JEDEN SCHRITT SORGFÄLTIG DURCH
+Um sich bei MySQL anzumelden, um es zu sichern, benötigen wir den aktuellen
+Passwort für den Root-Benutzer. Wenn Sie gerade MySQL installiert haben, und
+Wenn Sie das Root-Passwort noch nicht festgelegt haben, ist das Passwort leer.
+Drücken Sie hier einfach die Eingabetaste.
+
+
+Geben Sie das aktuelle Passwort für root ein (geben Sie für none ein):
+OK, erfolgreich verwendetes Passwort, weiter…
+
+
+Durch das Festlegen des Root-Passworts wird sichergestellt, dass sich niemand bei MySQL Root-Benutzer ohne die entsprechende Berechtigung anmelden kann
+
+Set root password? [Y/n] Y
+New password:
+Re-enter new password:
+Password updated successfully!
+Reloading privilege tables..
+… Success!
+
+
+Standardmäßig hat eine MySQL-Installation einen anonymen Benutzer, der jedem erlaubt
+um sich bei MySQL anzumelden, ohne dass ein Benutzerkonto für erstellt werden muss
+Sie. Dies ist nur zum Testen und zur Installation vorgesehen
+geh ein bisschen ruhiger. Sie sollten sie entfernen, bevor Sie in ein
+Produktionsumgebung.
+Anonyme Benutzer entfernen? [J / n] Y.
+… Erfolg!
+
+
+Normalerweise sollte root nur über "localhost" eine Verbindung herstellen dürfen. Diese
+stellt sicher, dass jemand das Root-Passwort aus dem Netzwerk nicht erraten kann.
+Remote-Login aus der Ferne nicht zulassen? [J / n] Y.
+… Erfolg!
+
+
+Standardmäßig wird MySQL mit einer Datenbank namens "Test" geliefert, die jeder nutzen kann
+Zugriff. Dies ist auch nur zum Testen vorgesehen und sollte entfernt werden
+vor dem Umzug in eine Produktionsumgebung.
+
+
+Testdatenbank entfernen und darauf zugreifen? [J / n] Y.
+- Löschen der Testdatenbank…
+… Erfolg!
+- Entfernen von Berechtigungen für die Testdatenbank…
+… Erfolg!
+
+
+Durch erneutes Laden der Berechtigungstabellen wird sichergestellt, dass alle bisher vorgenommenen Änderungen vorgenommen wurden
+wird sofort wirksam.
+
+Berechtigungstabellen jetzt neu laden? [J / n] Y.
+… Erfolg!
+
+
+Aufräumen…
+
+
+Alles erledigt! Wenn Sie alle oben genannten Schritte ausgeführt haben, wird MySQL
+Die Installation sollte jetzt sicher sein.
+Vielen Dank, dass Sie MySQL verwenden!
+
