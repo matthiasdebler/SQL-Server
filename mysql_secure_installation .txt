@@ -1,3 +1,4 @@
+# VALIDATE PASSWORD PLUGIN
 $ sudo mysql_secure_installation (ubuntu)
 
 HINWEIS: Das Ausführen aller Teile dieses Skripts wird für alle MySQL empfohlen
